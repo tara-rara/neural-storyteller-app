@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neural Storyteller</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="background-globes">
+        <div class="globe globe-1"></div>
+        <div class="globe globe-2"></div>
+        <div class="globe globe-3"></div>
+    </div>
+
+    <main class="container">
+        <header>
+            <h1>Neural <span class="highlight">Storyteller</span></h1>
+            <p>Upload an image and let the AI tell you its story.</p>
+        </header>
+
+        <div class="app-card">
+            <div class="upload-section" id="drop-zone">
+                <input type="file" id="file-input" accept="image/*" hidden>
+                <div class="upload-content" id="upload-content">
+                    <i class="fa-solid fa-cloud-arrow-up upload-icon"></i>
+                    <h3>Upload Image</h3>
+                    <p>Drag & drop or click to browse</p>
+                </div>
+                <div class="preview-container hidden" id="preview-container">
+                    <img id="image-preview" src="" alt="Preview">
+                    <button class="remove-btn" id="remove-btn"><i class="fa-solid fa-times"></i></button>
+                </div>
+            </div>
+
+            <div class="result-section">
+                <div class="result-header">
+                    <h2><i class="fa-solid fa-pen-nib"></i> The Story</h2>
+                </div>
+                <div class="result-content" id="result-content">
+                    <p class="placeholder-text">Your story will appear here...</p>
+                    <div class="loading-spinner hidden" id="loading-spinner">
+                        <div class="spinner"></div>
+                        <p>Weaving a story...</p>
+                    </div>
+                </div>
+                <button id="generate-btn" class="generate-btn" disabled>
+                    <span>Tell Story</span>
+                    <i class="fa-solid fa-wand-magic-sparkles"></i>
+                </button>
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
